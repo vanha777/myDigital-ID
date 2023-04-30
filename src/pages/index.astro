@@ -2,13 +2,120 @@
 import { published } from "@data/post"
 import Blog from "@layouts/blog";
 import Preview from "@components/blog/preview";
-
-const markdownFiles = await Astro.glob('../content/**/*.md')
-const posts = published( markdownFiles );
+import Page from "@layouts/page";
 ---
+<Page title="About me">
+	<div class="mb-10 flex justify-center items-center">
+		<div class="card card-side bg-base-100 shadow-xl">
+			<figure>
+				<img class="w-200 h-200" src="/aiProfile.jpg" alt="Movie" />
+			</figure>
+			<div class="card-body">
+				<h2 class="card-title justify-center">The Copy Coder Is In Town !</h2>
 
-<Blog>
-	<div>
-		{posts.map((p) => <Preview post={p} />)}
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>Solidity & Web3.js</span
+					>
+					<progress
+						class="progress progress-success w-56"
+						value="55"
+						max="100"></progress>
+				</div>
+
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>Three.js,Babylon.js & React-three/fiber</span
+					>
+					<progress
+						class="progress progress-primary w-56"
+						value="65"
+						max="100"></progress>
+				</div>
+
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>Google Search & Copy</span
+					>
+					<progress
+						class="progress progress-seccondary w-56"
+						value="100"
+						max="100"></progress>
+				</div>
+
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>React.js & Next.js</span
+					>
+					<progress
+						class="progress progress-accent w-56"
+						value="78"
+						max="100"></progress>
+				</div>
+
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>Node.js & Express.js</span
+					>
+					<progress
+						class="progress progress-error w-56"
+						value="69"
+						max="100"></progress>
+				</div>
+
+				<div class="flex items-center p-1">
+					<span class="text-base-content/70 w-48 text-xs"
+						>PostgreSQL & MongoDB</span
+					>
+					<progress
+						class="progress progress-warning w-56"
+						value="55"
+						max="100"></progress>
+				</div>
+				<div class="card-actions justify-center">
+					<button class="btn btn-primary">Văn Jiro</button>
+				</div>
+			</div>
+		</div>
 	</div>
-</Blog>
+
+	<h1>About me</h1>
+
+	<h3>Journey</h3>
+	<p>
+		As a passionate and self-motivated developer based in Australia, I have
+		taken an unconventional path towards my career in technology. From my
+		beginnings as a mechanic, I have since transitioned into the tech
+		industry, learning to code in my spare time and building applications as
+		a hobby. Through this journey, I have developed a deep appreciation for
+		the power of technology and its ability to change the world.
+	</p>
+
+	<h3 class="my-5">Personality</h3>
+	<p>
+		One of my core values is honesty and transparency. I strive to approach
+		every project and task with integrity, keeping all stakeholders informed
+		and involved throughout the process. This allows for open communication
+		and fosters trust, both essential for successful partnerships.
+	</p>
+
+	<h3>Mindset</h3>
+	<p>
+		In addition to my technical skills, I am constantly developing my
+		entrepreneurial mindset. I invest and trade in cryptocurrency and am an
+		admirer of blockchain technology, having deployed, written, and
+		interacted with smart contracts on both the Ethereum and Cardano
+		blockchains. I also maintain a coding diary through blogging,
+		documenting my growth and experiences as a developer.
+	</p>
+
+	<h3>Ability</h3>
+	<p>
+		As a hands-on learner, I thrive in an environment where I can experiment
+		with new ideas and technologies. I am adaptive and fast-forward
+		thinking, constantly exploring new possibilities and developing
+		innovative solutions. As an aspiring entrepreneur, I am always looking
+		for opportunities to create value and make a positive impact in the
+		world.
+	</p>
+</Page>
